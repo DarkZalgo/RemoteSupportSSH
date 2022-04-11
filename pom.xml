@@ -18,8 +18,14 @@
         <buildNumber>${maven.build.timestamp}</buildNumber>
         <junit.version>5.7.1</junit.version>
     </properties>
-
+    <repositories>
+        <repository>
+            <id>terminalfx-repo</id>
+            <url>https://github.com/javaterminal/terminalfx/raw/master/releases</url>
+        </repository>
+    </repositories>
     <dependencies>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -48,6 +54,11 @@
             <artifactId>sshj</artifactId>
             <version>0.32.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.kodedu.terminalfx</groupId>
+            <artifactId>terminalfx</artifactId>
+            <version>1.0.8</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -70,7 +81,7 @@
                     <release>${maven.compiler.release}</release>
                     <jlinkImageName>RemoteSupportSSH</jlinkImageName>
                     <launcher>launcher</launcher>
-                    <mainClass>com.johnc.remotesupportssh/com.johnc.remotesupportssh.MainApp
+                    <mainClass>com.johnc.remotesupportssh.MainApp
                     </mainClass>
                 </configuration>
                 <!--

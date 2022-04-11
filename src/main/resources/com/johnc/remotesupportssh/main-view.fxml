@@ -4,10 +4,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.2" fx:controller="com.johnc.remotesupportssh.MainController">
+<Pane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.johnc.remotesupportssh.MainController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
     <Label fx:id="welcomeText" />
+   <Button layoutX="707.0" layoutY="313.0" mnemonicParsing="false" onAction="#createPTYConnection" text="Connect" />
+   <TextArea fx:id="curTextArea" layoutX="28.0" layoutY="16.0" prefHeight="257.0" prefWidth="742.0" />
+   <Button layoutX="349.0" layoutY="430.0" mnemonicParsing="false" onAction="#sendMsg" text="Send" />
+   <TextArea fx:id="sendTextArea" layoutX="213.0" layoutY="313.0" prefHeight="107.0" prefWidth="373.0" />
 </Pane>
